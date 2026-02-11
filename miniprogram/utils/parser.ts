@@ -1,16 +1,16 @@
-export interface ParsedInput {
+export interface ParsedTransaction {
     amount: number; // In cents
     category: string;
-    raw: string;
+    type: 'EXPENSE';
 }
 
 /**
  * Parses user input string into transaction details.
  * Supports "Category Amount" or "Amount Category" formats.
- * Example: "Taxi 35" -> { amount: 3500, category: "Taxi" }
- * Example: "35 Taxi" -> { amount: 3500, category: "Taxi" }
+ * Example: "Taxi 35" -> { amount: 3500, category: "Taxi", type: 'EXPENSE' }
+ * Example: "35 Taxi" -> { amount: 3500, category: "Taxi", type: 'EXPENSE' }
  */
-export function parseInput(input: string): ParsedInput | null {
+export function parseTransaction(input: string): ParsedTransaction | null {
     if (!input || !input.trim()) return null;
 
     const cleanInput = input.trim();
@@ -42,6 +42,6 @@ export function parseInput(input: string): ParsedInput | null {
     return {
         amount: amountInCents,
         category: category,
-        raw: cleanInput
+        type: 'EXPENSE'
     };
 }

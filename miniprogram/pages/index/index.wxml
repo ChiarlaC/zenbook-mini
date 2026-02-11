@@ -3,7 +3,7 @@
   
   <view class="balance-section">
     <text class="balance-label">今日可用 (Survival Balance)</text>
-    <text class="balance-value">¥ 180.00</text>
+    <text class="balance-value">¥ {{displayBalance}}</text>
   </view>
 
   <view class="fab-container" bindtap="onTapAdd">
