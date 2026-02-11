@@ -6,8 +6,23 @@
     <text class="balance-value">¥ 180.00</text>
   </view>
 
-  <view class="fab-container">
+  <view class="fab-container" bindtap="onTapAdd">
     <view class="fab-button">+</view>
+  </view>
+
+  <!-- Flash Record Modal -->
+  <view class="modal-overlay" wx:if="{{showInput}}" bindtap="onHideInput">
+    <view class="modal-content" catchtap="true">
+        <input 
+            class="flash-input" 
+            placeholder="输入: 类别 金额 (如: 午餐 30)" 
+            placeholder-style="color: #999;"
+            focus="{{showInput}}"
+            bindconfirm="onInputConfirm"
+            value="{{inputValue}}"
+        />
+        <text class="input-hint">按回车确认</text>
+    </view>
   </view>
 
 </view>
