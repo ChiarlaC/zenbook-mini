@@ -1,0 +1,54 @@
+/** index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.balance-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #666666; /* Soft Gray */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.balance-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333333; /* Black */
+}
+
+.fab-container {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+
+.fab-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

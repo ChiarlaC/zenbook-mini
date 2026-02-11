@@ -1,0 +1,24 @@
+/** app.wxss **/
+page, view, text, scroll-view, swiper, button, input, textarea, label, navigator, image {
+  box-sizing: border-box;
+}
+
+page {
+  /* Theme Variables */
+  --primary-color: #333333;
+  --bg-color: #F7F7F7;
+  --danger-color: #FF4D4F;
+  --success-color: #52C41A;
+  
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

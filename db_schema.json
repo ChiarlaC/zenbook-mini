@@ -1,0 +1,27 @@
+{
+  "accounts": {
+    "bsonType": "object",
+    "required": ["_id", "name", "type", "balance", "currency"],
+    "properties": {
+      "_id": { "bsonType": "string" },
+      "name": { "bsonType": "string" },
+      "type": { "enum": ["ASSET", "LIABILITY", "EQUITY"] },
+      "balance": { "bsonType": "int", "description": "Balance in cents" },
+      "currency": { "bsonType": "string" }
+    }
+  },
+  "transactions": {
+    "bsonType": "object",
+    "required": ["_id", "amount", "type", "source_account_id", "target_account_id", "created_at"],
+    "properties": {
+      "_id": { "bsonType": "string" },
+      "amount": { "bsonType": "int", "description": "Absolute value in cents" },
+      "type": { "enum": ["EXPENSE", "INCOME", "TRANSFER", "ADJUSTMENT"] },
+      "source_account_id": { "bsonType": "string" },
+      "target_account_id": { "bsonType": "string" },
+      "category_tags": { "bsonType": "array", "items": { "bsonType": "string" } },
+      "raw_input": { "bsonType": "string" },
+      "created_at": { "bsonType": "timestamp" }
+    }
+  }
+}
